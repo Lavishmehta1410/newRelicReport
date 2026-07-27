@@ -386,7 +386,7 @@ const fetchDataForQueryId = async (queryId) => {
       const maxValue = maxItem.value;
       const maxTime = new Date(
         maxItem.beginTimeSeconds * 1000
-      ).toLocaleString();
+      ).toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
 
       const maxx = response.data;
       maxx.maxTime = maxTime;
