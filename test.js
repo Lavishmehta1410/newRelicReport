@@ -27,7 +27,9 @@ if (data === "Error Processing data") {
 
   // Converting beginTimeSeconds to date strings and extracting values
   const labels = results.map((item) =>
-    new Date(item.beginTimeSeconds * 1000).toLocaleString()
+    new Date(item.beginTimeSeconds * 1000).toLocaleString("en-IN", {
+      timeZone: "Asia/Kolkata",
+    })
   );
   const values = results.map((item) => item.value);
 
